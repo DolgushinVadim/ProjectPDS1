@@ -29,15 +29,27 @@ namespace Program
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBoxTask = new System.Windows.Forms.GroupBox();
+            this.pictureBoxFormula = new System.Windows.Forms.PictureBox();
             this.textBoxTask = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBoxOutput = new System.Windows.Forms.GroupBox();
+            this.chartGraph = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pictureBoxResult = new System.Windows.Forms.PictureBox();
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.groupBoxInput = new System.Windows.Forms.GroupBox();
+            this.pictureBoxVarp = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVarr = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVarRk = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVarPz = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVarPp = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVaru = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVarh = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVark = new System.Windows.Forms.PictureBox();
             this.textBoxVarp = new System.Windows.Forms.TextBox();
             this.textBoxVark = new System.Windows.Forms.TextBox();
             this.textBoxVarPp = new System.Windows.Forms.TextBox();
@@ -47,19 +59,12 @@ namespace Program
             this.textBoxVarPz = new System.Windows.Forms.TextBox();
             this.textBoxVarh = new System.Windows.Forms.TextBox();
             this.buttonDone = new System.Windows.Forms.Button();
-            this.pictureBoxVarp = new System.Windows.Forms.PictureBox();
-            this.pictureBoxVarr = new System.Windows.Forms.PictureBox();
-            this.pictureBoxVarRk = new System.Windows.Forms.PictureBox();
-            this.pictureBoxVarPz = new System.Windows.Forms.PictureBox();
-            this.pictureBoxVarPp = new System.Windows.Forms.PictureBox();
-            this.pictureBoxVaru = new System.Windows.Forms.PictureBox();
-            this.pictureBoxVarh = new System.Windows.Forms.PictureBox();
-            this.pictureBoxVark = new System.Windows.Forms.PictureBox();
-            this.pictureBoxResult = new System.Windows.Forms.PictureBox();
-            this.pictureBoxFormula = new System.Windows.Forms.PictureBox();
-            this.chartGraph = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.buttonHelp = new System.Windows.Forms.Button();
             this.groupBoxTask.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFormula)).BeginInit();
             this.groupBoxOutput.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGraph)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).BeginInit();
             this.groupBoxInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVarp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVarr)).BeginInit();
@@ -69,9 +74,6 @@ namespace Program
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVaru)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVarh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVark)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFormula)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartGraph)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxTask
@@ -83,7 +85,17 @@ namespace Program
             this.groupBoxTask.Size = new System.Drawing.Size(735, 153);
             this.groupBoxTask.TabIndex = 0;
             this.groupBoxTask.TabStop = false;
-            this.groupBoxTask.Text = "Условие";
+            this.groupBoxTask.Text = "Информация:";
+            // 
+            // pictureBoxFormula
+            // 
+            this.pictureBoxFormula.Image = global::Program.Properties.Resources.FormulaD;
+            this.pictureBoxFormula.Location = new System.Drawing.Point(365, 21);
+            this.pictureBoxFormula.Name = "pictureBoxFormula";
+            this.pictureBoxFormula.Size = new System.Drawing.Size(361, 126);
+            this.pictureBoxFormula.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxFormula.TabIndex = 1;
+            this.pictureBoxFormula.TabStop = false;
             // 
             // textBoxTask
             // 
@@ -93,8 +105,7 @@ namespace Program
             this.textBoxTask.ReadOnly = true;
             this.textBoxTask.Size = new System.Drawing.Size(353, 126);
             this.textBoxTask.TabIndex = 0;
-            this.textBoxTask.Text = "Найти дебит скважины с помощью формула Дюпюи для плоскорадиального притока идеаль" +
-    "ного газа в скважину.";
+            this.textBoxTask.Text = resources.GetString("textBoxTask.Text");
             // 
             // groupBoxOutput
             // 
@@ -107,6 +118,33 @@ namespace Program
             this.groupBoxOutput.TabIndex = 1;
             this.groupBoxOutput.TabStop = false;
             this.groupBoxOutput.Text = "Вывод данных:";
+            // 
+            // chartGraph
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.chartGraph.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartGraph.Legends.Add(legend5);
+            this.chartGraph.Location = new System.Drawing.Point(6, 90);
+            this.chartGraph.Name = "chartGraph";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartGraph.Series.Add(series5);
+            this.chartGraph.Size = new System.Drawing.Size(430, 321);
+            this.chartGraph.TabIndex = 5;
+            this.chartGraph.Text = "chart1";
+            // 
+            // pictureBoxResult
+            // 
+            this.pictureBoxResult.Image = global::Program.Properties.Resources.Result;
+            this.pictureBoxResult.Location = new System.Drawing.Point(6, 31);
+            this.pictureBoxResult.Name = "pictureBoxResult";
+            this.pictureBoxResult.Size = new System.Drawing.Size(194, 25);
+            this.pictureBoxResult.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxResult.TabIndex = 4;
+            this.pictureBoxResult.TabStop = false;
             // 
             // textBoxResult
             // 
@@ -140,72 +178,6 @@ namespace Program
             this.groupBoxInput.TabIndex = 2;
             this.groupBoxInput.TabStop = false;
             this.groupBoxInput.Text = "Ввод данных:";
-            // 
-            // textBoxVarp
-            // 
-            this.textBoxVarp.Location = new System.Drawing.Point(398, 298);
-            this.textBoxVarp.Name = "textBoxVarp";
-            this.textBoxVarp.Size = new System.Drawing.Size(269, 22);
-            this.textBoxVarp.TabIndex = 11;
-            // 
-            // textBoxVark
-            // 
-            this.textBoxVark.Location = new System.Drawing.Point(6, 56);
-            this.textBoxVark.Name = "textBoxVark";
-            this.textBoxVark.Size = new System.Drawing.Size(272, 22);
-            this.textBoxVark.TabIndex = 10;
-            // 
-            // textBoxVarPp
-            // 
-            this.textBoxVarPp.Location = new System.Drawing.Point(6, 298);
-            this.textBoxVarPp.Name = "textBoxVarPp";
-            this.textBoxVarPp.Size = new System.Drawing.Size(272, 22);
-            this.textBoxVarPp.TabIndex = 5;
-            // 
-            // textBoxVarRk
-            // 
-            this.textBoxVarRk.Location = new System.Drawing.Point(398, 132);
-            this.textBoxVarRk.Name = "textBoxVarRk";
-            this.textBoxVarRk.Size = new System.Drawing.Size(269, 22);
-            this.textBoxVarRk.TabIndex = 6;
-            // 
-            // textBoxVarr
-            // 
-            this.textBoxVarr.Location = new System.Drawing.Point(398, 212);
-            this.textBoxVarr.Name = "textBoxVarr";
-            this.textBoxVarr.Size = new System.Drawing.Size(269, 22);
-            this.textBoxVarr.TabIndex = 4;
-            // 
-            // textBoxVaru
-            // 
-            this.textBoxVaru.Location = new System.Drawing.Point(6, 212);
-            this.textBoxVaru.Name = "textBoxVaru";
-            this.textBoxVaru.Size = new System.Drawing.Size(272, 22);
-            this.textBoxVaru.TabIndex = 9;
-            // 
-            // textBoxVarPz
-            // 
-            this.textBoxVarPz.Location = new System.Drawing.Point(398, 52);
-            this.textBoxVarPz.Name = "textBoxVarPz";
-            this.textBoxVarPz.Size = new System.Drawing.Size(269, 22);
-            this.textBoxVarPz.TabIndex = 8;
-            // 
-            // textBoxVarh
-            // 
-            this.textBoxVarh.Location = new System.Drawing.Point(6, 132);
-            this.textBoxVarh.Name = "textBoxVarh";
-            this.textBoxVarh.Size = new System.Drawing.Size(272, 22);
-            this.textBoxVarh.TabIndex = 7;
-            // 
-            // buttonDone
-            // 
-            this.buttonDone.Location = new System.Drawing.Point(1195, 476);
-            this.buttonDone.Name = "buttonDone";
-            this.buttonDone.Size = new System.Drawing.Size(146, 61);
-            this.buttonDone.TabIndex = 3;
-            this.buttonDone.Text = "Выполнить";
-            this.buttonDone.UseVisualStyleBackColor = true;
-            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
             // pictureBoxVarp
             // 
@@ -287,58 +259,105 @@ namespace Program
             this.pictureBoxVark.TabIndex = 4;
             this.pictureBoxVark.TabStop = false;
             // 
-            // pictureBoxResult
+            // textBoxVarp
             // 
-            this.pictureBoxResult.Image = global::Program.Properties.Resources.Result;
-            this.pictureBoxResult.Location = new System.Drawing.Point(6, 31);
-            this.pictureBoxResult.Name = "pictureBoxResult";
-            this.pictureBoxResult.Size = new System.Drawing.Size(194, 25);
-            this.pictureBoxResult.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxResult.TabIndex = 4;
-            this.pictureBoxResult.TabStop = false;
+            this.textBoxVarp.Location = new System.Drawing.Point(398, 298);
+            this.textBoxVarp.Name = "textBoxVarp";
+            this.textBoxVarp.Size = new System.Drawing.Size(269, 22);
+            this.textBoxVarp.TabIndex = 11;
             // 
-            // pictureBoxFormula
+            // textBoxVark
             // 
-            this.pictureBoxFormula.Image = global::Program.Properties.Resources.FormulaD;
-            this.pictureBoxFormula.Location = new System.Drawing.Point(365, 21);
-            this.pictureBoxFormula.Name = "pictureBoxFormula";
-            this.pictureBoxFormula.Size = new System.Drawing.Size(361, 126);
-            this.pictureBoxFormula.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxFormula.TabIndex = 1;
-            this.pictureBoxFormula.TabStop = false;
+            this.textBoxVark.Location = new System.Drawing.Point(6, 56);
+            this.textBoxVark.Name = "textBoxVark";
+            this.textBoxVark.Size = new System.Drawing.Size(272, 22);
+            this.textBoxVark.TabIndex = 10;
             // 
-            // chartGraph
+            // textBoxVarPp
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartGraph.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartGraph.Legends.Add(legend2);
-            this.chartGraph.Location = new System.Drawing.Point(6, 90);
-            this.chartGraph.Name = "chartGraph";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartGraph.Series.Add(series2);
-            this.chartGraph.Size = new System.Drawing.Size(430, 321);
-            this.chartGraph.TabIndex = 5;
-            this.chartGraph.Text = "chart1";
+            this.textBoxVarPp.Location = new System.Drawing.Point(6, 298);
+            this.textBoxVarPp.Name = "textBoxVarPp";
+            this.textBoxVarPp.Size = new System.Drawing.Size(272, 22);
+            this.textBoxVarPp.TabIndex = 5;
+            // 
+            // textBoxVarRk
+            // 
+            this.textBoxVarRk.Location = new System.Drawing.Point(398, 132);
+            this.textBoxVarRk.Name = "textBoxVarRk";
+            this.textBoxVarRk.Size = new System.Drawing.Size(269, 22);
+            this.textBoxVarRk.TabIndex = 6;
+            // 
+            // textBoxVarr
+            // 
+            this.textBoxVarr.Location = new System.Drawing.Point(398, 212);
+            this.textBoxVarr.Name = "textBoxVarr";
+            this.textBoxVarr.Size = new System.Drawing.Size(269, 22);
+            this.textBoxVarr.TabIndex = 4;
+            // 
+            // textBoxVaru
+            // 
+            this.textBoxVaru.Location = new System.Drawing.Point(6, 212);
+            this.textBoxVaru.Name = "textBoxVaru";
+            this.textBoxVaru.Size = new System.Drawing.Size(272, 22);
+            this.textBoxVaru.TabIndex = 9;
+            // 
+            // textBoxVarPz
+            // 
+            this.textBoxVarPz.Location = new System.Drawing.Point(398, 52);
+            this.textBoxVarPz.Name = "textBoxVarPz";
+            this.textBoxVarPz.Size = new System.Drawing.Size(269, 22);
+            this.textBoxVarPz.TabIndex = 8;
+            // 
+            // textBoxVarh
+            // 
+            this.textBoxVarh.Location = new System.Drawing.Point(6, 132);
+            this.textBoxVarh.Name = "textBoxVarh";
+            this.textBoxVarh.Size = new System.Drawing.Size(272, 22);
+            this.textBoxVarh.TabIndex = 7;
+            // 
+            // buttonDone
+            // 
+            this.buttonDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonDone.Location = new System.Drawing.Point(1195, 476);
+            this.buttonDone.Name = "buttonDone";
+            this.buttonDone.Size = new System.Drawing.Size(146, 61);
+            this.buttonDone.TabIndex = 3;
+            this.buttonDone.Text = "Выполнить";
+            this.buttonDone.UseVisualStyleBackColor = false;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
+            // 
+            // buttonHelp
+            // 
+            this.buttonHelp.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonHelp.Location = new System.Drawing.Point(1061, 476);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(105, 61);
+            this.buttonHelp.TabIndex = 4;
+            this.buttonHelp.Text = "Справка";
+            this.buttonHelp.UseVisualStyleBackColor = false;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1355, 549);
+            this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.buttonDone);
             this.Controls.Add(this.groupBoxInput);
             this.Controls.Add(this.groupBoxOutput);
             this.Controls.Add(this.groupBoxTask);
+            this.MaximizeBox = false;
             this.Name = "FormMain";
-            this.Text = "Формула Дюпюи для плоскорадиального притока идеального газа в скважину";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Моделирование притока к вертикальным газовым скважинам";
             this.groupBoxTask.ResumeLayout(false);
             this.groupBoxTask.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFormula)).EndInit();
             this.groupBoxOutput.ResumeLayout(false);
             this.groupBoxOutput.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGraph)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).EndInit();
             this.groupBoxInput.ResumeLayout(false);
             this.groupBoxInput.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVarp)).EndInit();
@@ -349,9 +368,6 @@ namespace Program
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVaru)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVarh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVark)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFormula)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartGraph)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,6 +400,7 @@ namespace Program
         private System.Windows.Forms.PictureBox pictureBoxVarr;
         private System.Windows.Forms.PictureBox pictureBoxVarp;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartGraph;
+        private System.Windows.Forms.Button buttonHelp;
     }
 }
 

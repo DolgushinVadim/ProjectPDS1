@@ -17,11 +17,11 @@ namespace Program
         {
             InitializeComponent();
         }
+        DataService ds = new DataService();
         private void buttonDone_Click(object sender, EventArgs e)
         {
             try
             {
-                DataService ds = new DataService();
                 double k = Convert.ToDouble(textBoxVark.Text);
                 double h = Convert.ToDouble(textBoxVarh.Text);
                 double u = Convert.ToDouble(textBoxVaru.Text);
@@ -37,6 +37,10 @@ namespace Program
             {
                 MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Данная программа предназначена для расчёта плоскорадиального притока идеального газа в скважину по формуле Дюпюи. Программа была написана студентами группы ИИПб-23-3 Долгушиным Вадимом, Вележаниным Павлом, Галеевым Тимуром и Константином Осинцевым.", "О программе", MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
     }
 }
