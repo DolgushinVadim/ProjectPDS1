@@ -38,6 +38,9 @@ namespace Program
             this.textBoxTask = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBoxOutput = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelResult = new System.Windows.Forms.Label();
+            this.textBoxResult2 = new System.Windows.Forms.TextBox();
             this.chartGraph = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pictureBoxResult = new System.Windows.Forms.PictureBox();
             this.textBoxResult = new System.Windows.Forms.TextBox();
@@ -60,9 +63,6 @@ namespace Program
             this.textBoxVarh = new System.Windows.Forms.TextBox();
             this.buttonDone = new System.Windows.Forms.Button();
             this.buttonHelp = new System.Windows.Forms.Button();
-            this.textBoxResult2 = new System.Windows.Forms.TextBox();
-            this.labelResult = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBoxTask.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFormula)).BeginInit();
             this.groupBoxOutput.SuspendLayout();
@@ -124,6 +124,33 @@ namespace Program
             this.groupBoxOutput.TabIndex = 1;
             this.groupBoxOutput.TabStop = false;
             this.groupBoxOutput.Text = "Вывод данных:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(499, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "м^3/ч";
+            // 
+            // labelResult
+            // 
+            this.labelResult.AutoSize = true;
+            this.labelResult.Location = new System.Drawing.Point(206, 67);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(43, 17);
+            this.labelResult.TabIndex = 7;
+            this.labelResult.Text = "м^3/с";
+            // 
+            // textBoxResult2
+            // 
+            this.textBoxResult2.Location = new System.Drawing.Point(302, 62);
+            this.textBoxResult2.Multiline = true;
+            this.textBoxResult2.Name = "textBoxResult2";
+            this.textBoxResult2.ReadOnly = true;
+            this.textBoxResult2.Size = new System.Drawing.Size(191, 22);
+            this.textBoxResult2.TabIndex = 6;
             // 
             // chartGraph
             // 
@@ -342,33 +369,6 @@ namespace Program
             this.buttonHelp.Text = "Справка";
             this.buttonHelp.UseVisualStyleBackColor = false;
             this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
-            // 
-            // textBoxResult2
-            // 
-            this.textBoxResult2.Location = new System.Drawing.Point(302, 62);
-            this.textBoxResult2.Multiline = true;
-            this.textBoxResult2.Name = "textBoxResult2";
-            this.textBoxResult2.ReadOnly = true;
-            this.textBoxResult2.Size = new System.Drawing.Size(191, 22);
-            this.textBoxResult2.TabIndex = 6;
-            // 
-            // labelResult
-            // 
-            this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(206, 67);
-            this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(43, 17);
-            this.labelResult.TabIndex = 7;
-            this.labelResult.Text = "м^3/с";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(499, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 17);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "м^3/ч";
             // 
             // FormMain
             // 
