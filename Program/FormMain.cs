@@ -31,7 +31,9 @@ namespace Program
                 double r = Convert.ToDouble(textBoxVarr.Text);
                 double p = Convert.ToDouble(textBoxVarp.Text);
                 double result = ds.Calculate(k, h, u, Pp, Pz, Rk, r, p);
+                double result2 = 3600 * ds.Calculate(k, h, u, Pp, Pz, Rk, r, p);
                 textBoxResult.Text = Convert.ToString(result);
+                textBoxResult2.Text = Convert.ToString(result2);
             }
             catch
             {
